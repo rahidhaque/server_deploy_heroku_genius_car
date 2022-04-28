@@ -87,6 +87,10 @@ async function run() {
             res.send(result);
         })
 
+        app.get('/hero', (req, res) => {
+            res.send('Hero meeets Hero Alom');
+        })
+
         //Load all the posted products
         app.get('/order', verifyJWT, async (req, res) => {
             const decodedEmail = req.decoded.email;
